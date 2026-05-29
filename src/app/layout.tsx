@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Great_Vibes, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -47,6 +48,7 @@ export default function RootLayout({
         className={`${cinzel.variable} ${greatVibes.variable} ${montserrat.variable} antialiased bg-[#0c0305] text-stone-100 overflow-x-hidden`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
